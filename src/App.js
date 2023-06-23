@@ -30,6 +30,7 @@ import Big from "big.js";
 import { NavigationWrapper } from "./components/navigation/NavigationWrapper";
 import { NetworkId, Widgets } from "./data/widgets";
 import { useEthersProviderContext } from "./data/web3";
+import { Scanner } from "./components/ticketing/components/scanner";
 
 export const refreshAllowanceObj = {};
 const documentationHref = "https://social.near-docs.io/";
@@ -170,6 +171,10 @@ function App(props) {
       <EthersProviderContext.Provider value={ethersProviderContext}>
         <Router basename={process.env.PUBLIC_URL}>
           <Switch>
+          <Route path={"/scanner*"}>
+              <NavigationWrapper {...passProps} />
+              <Scanner/>
+            </Route>
             <Route path={"/embed/:widgetSrc*"}>
               <EmbedPage {...passProps} />
             </Route>

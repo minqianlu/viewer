@@ -1,6 +1,7 @@
 const TestnetDomains = {
   "test.near.social": true,
   "127.0.0.1": true,
+  "localhost": true,
 };
 
 export const NetworkId =
@@ -15,6 +16,7 @@ const TestnetWidgets = {
   profilePage: "eugenethedream/widget/Profile",
   profileName: "eugenethedream/widget/ProfileName",
   notificationButton: "eugenethedream/widget/NotificationButton",
+  scanner: "minqi/widget/kp-ticket-scanner"
 };
 
 const MainnetWidgets = {
