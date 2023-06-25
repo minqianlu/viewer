@@ -87,9 +87,9 @@ export const onboard = init({
     },
   ],
   appMetadata: {
-    name: "NEAR Social",
+    name: "Near Social+",
     icon,
-    description: "NEAR Social",
+    description: "Near Social+",
   },
   theme: "dark",
   containerElements: {

@@ -34,6 +34,7 @@ export const Scanner = () => {
     onResult(result) {
       setResult(result.getText());
       setResPrivkey(result.getText().split("/")[1])
+      console.log(result.getText().split("/")[1])
 
       //indicate new data
       let tempMaster = {
@@ -60,6 +61,7 @@ export const Scanner = () => {
     }
 
     async function scannerClaim() {
+      
       let isAllowedIn = await allowEntry({
         privKey: resPrivKey,
         basePassword: password

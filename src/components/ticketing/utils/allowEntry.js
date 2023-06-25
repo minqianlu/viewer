@@ -10,6 +10,8 @@ async function allowEntry({privKey, basePassword}) {
     try {
         // Check 1: Key existence
         var publicKey = getPubFromSecret(privKey)
+        console.log(privKey)
+        console.log(publicKey)
         var keyInfo = await getKeyInformation({publicKey})
         // If key does not exist, the user should not be admitted
         if(keyInfo == null) {
@@ -27,6 +29,7 @@ async function allowEntry({privKey, basePassword}) {
 
         // Create password using base + pubkey + key use as string
         let passwordForClaim = await hashPassword(basePassword + publicKey + curUse.toString())
+        console.log(passwordForClaim);
         // Claim with created password
         await claim({
             secretKey: privKey,
